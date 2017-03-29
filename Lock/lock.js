@@ -2,7 +2,7 @@
  * title:  web移动端九宫格锁屏组件
  * author: 黄一凡
  * date  : 2017.03.28
- * github: https://github.com/xbx0119
+ * github: https://github.com/xbx0119/UI-Component/tree/master/Lock
  *
  */
 function Lock() {
