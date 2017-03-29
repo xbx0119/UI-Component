@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>手势密码</title>
+	<link rel="stylesheet" type="text/css" href="./lock.css">
+</head>
+<body>
+	<div id="wrapper">
+		
+		<div id="password">
+			<canvas id="canvas"></canvas>
+		</div>
+		<p id="info"></p>
+		<div id="radio">
+			<span><input type="radio" name="mod" id="set"><label for="set">设置密码</label></span><br>
+			<span><input type="radio" name="mod" id="check"><label for="check">验证密码</label></span>
+		</div>
+	</div>
+	<!-- 引入锁屏组件 -->
+	<script type="text/javascript">
+		var system ={
+			win : false,
+			mac : false,
+			xll : false
+		};
+		//检测平台
+		var p = navigator.platform;
+		system.win = (p.indexOf("Win") == 0);
+		system.mac = (p.indexOf("Mac") == 0);
+		system.x11 = ((p == "X11") || (p.indexOf("Linux") == 0));
+
+		if(system.win || system.mac || system.xll){
+			document.body.innerHTML = "请使用手机访问";
+		}else{
+			var script = document.createElement("script");
+			script.src = "./lock.js";
+			document.body.appendChild(script);
+			script = null;
+		}
+	</script>
+</body>
+</html>

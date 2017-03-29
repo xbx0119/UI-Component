@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	position: fixed;
+}
+#wrapper {
+	width: 100%;
+	height: 100%;
+	background: #f0f0f0;
+	float: left;
+	
+}
+
+#password {
+	width: 70%;
+	height: 40%;
+	margin-left: 15%;
+	margin-top: 15%;
+	margin-bottom: 10%;
+	float: left;
+	/*display: -webkit-flex;
+  	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+	align-items: top;*/
+}
+.dot {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	background: #fff;
+	margin: 25px 25px;
+	flex-grow: 0;
+	flex-shrink: 1;
+}
+
+#info {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20%;
+	line-height: 40px;
+	float: left;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+
+#radio {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+#radio span {
+	display: inline-block;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+}
+#radio span input {
+	width: 15px;
+	height: 100%;
+	line-height: 100%;
+	margin-right: 5px;
+	float: left;
+}
+#radio span label {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	font-size: 1em;
+	letter-spacing: 1px;
+	float: left;
+}
