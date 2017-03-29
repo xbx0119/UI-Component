@@ -31,40 +31,40 @@
 ### 二.然后需要给页面上的一系列元素添加事件，代码参照lock.js。大致思路是： 
 创建一个Lock类型，Lock类型的属性和方法说明如下：
 ```javascript
-	function Lock() {
-		this.password;      // 数组 || 成功设置的密码，这个属性其实可以去掉，反正密码是要存在localStorage里面的
-		this.store;         // 数组 || 密码暂存数组，存储第一遍输入还没有确定的密码
-		this.state;         // 数字 || 当前所处状态（单选框） 0:设置密码 1:再次输入以确认密码 2:验证密码
-		this.info;          // 字符串 || 文本提示信息 
-		this.canvas;        // 对象 || canvas相关信息，包括绘图对象、canvas的长宽和密码点的半径
+function Lock() {
+	this.password;   // 数组 || 成功设置的密码，这个属性其实可以去掉，反正密码是要存在localStorage里面的
+	this.store;      // 数组 || 密码暂存数组，存储第一遍输入还没有确定的密码
+	this.state;      // 数字 || 当前所处状态（单选框） 0:设置密码 1:再次输入以确认密码 2:验证密码
+	this.info;       // 字符串 || 文本提示信息 
+	this.canvas;     // 对象 || canvas相关信息，包括绘图对象、canvas的长宽和密码点的半径
 
-		// 九宫格组件初始化，包括调用canvas九宫格的构建和单选框点击事件的添加
-		this.init = function() { }    
-	}
+	// 九宫格组件初始化，包括调用canvas九宫格的构建和单选框点击事件的添加
+	this.init = function() { }    
+}
 
-	// 添加canvas的触屏事件，包括touchstart、touchmove、touchend，在事件中包含对密码点路径的绘制和对暂存密码的设置
-	Lock.prototype.registerTouch = function() {}   
+// 添加canvas的触屏事件，包括touchstart、touchmove、touchend，在事件中包含对密码点路径的绘制和对暂存密码的设置
+Lock.prototype.registerTouch = function() {}   
 
-	// 设置状态 0:设置密码 1:再次输入以确认密码 2:验证密码
-	Lock.prototype.setState = function(mod) {}  
+// 设置状态 0:设置密码 1:再次输入以确认密码 2:验证密码
+Lock.prototype.setState = function(mod) {}  
 
-	// 设置密码，根据绘制的密码和当前状态选择执行操作
-	Lock.prototype.setPassword = function(tmp) {}
+// 设置密码，根据绘制的密码和当前状态选择执行操作
+Lock.prototype.setPassword = function(tmp) {}
 
-	// 确认密码，对第二次输入的密码与第一次比对
-	Lock.prototype.confirmPassword = function(tmp) {} 
+// 确认密码，对第二次输入的密码与第一次比对
+Lock.prototype.confirmPassword = function(tmp) {} 
 
-	// 验证密码，将localStorage中的密码与输入的密码比对
-	Lock.prototype.checkPassword = function(tmp) {}  
+// 验证密码，将localStorage中的密码与输入的密码比对
+Lock.prototype.checkPassword = function(tmp) {}  
 
-	// 显示文字信息
-	Lock.prototype.showInfo = function(text) {} 
+// 显示文字信息
+Lock.prototype.showInfo = function(text) {} 
 
-	// 重置canvas区域，清除之前输入的密码轨迹
-	Lock.prototype.reset = function() {}    
+// 重置canvas区域，清除之前输入的密码轨迹
+Lock.prototype.reset = function() {}    
 
-	// 初始化canvas，绘制九宫格
-	Lock.prototype.initCanvas = function() {}     
+// 初始化canvas，绘制九宫格
+Lock.prototype.initCanvas = function() {}     
 ```
 
 
