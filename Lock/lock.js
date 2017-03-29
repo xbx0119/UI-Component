@@ -3,6 +3,7 @@
  * author: 黄一凡
  * date  : 2017.03.28
  * github: https://github.com/xbx0119/UI-Component/tree/master/Lock
+ * demo  : http://www.norma0119.cn/Lock/
  *
  */
 function Lock() {
