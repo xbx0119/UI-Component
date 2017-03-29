@@ -1,5 +1,7 @@
 # 九宫格手势密码锁 Lock 组件 说明文档
 
+[demo](http://www.norma0119.cn/Lock/)
+
 ##简介：
 本组件旨在实现一个九宫格手势密码锁功能，应该比较好理解，就不太多解释了。 
 大致说明一下实现本组件所需的、以及实现过程中用过的但最终没用到的、觉得值得提一下的知识点吧。
@@ -37,10 +39,10 @@ function Lock() {
 	this.state;      // 数字 || 当前所处状态（单选框） 0:设置密码 1:再次输入以确认密码 2:验证密码
 	this.info;       // 字符串 || 文本提示信息 
 	this.canvas;     // 对象 || canvas相关信息，包括绘图对象、canvas的长宽和密码点的半径
-
-	// 九宫格组件初始化，包括调用canvas九宫格的构建和单选框点击事件的添加
-	this.init = function() { }    
 }
+
+// 九宫格组件初始化，包括调用canvas九宫格的构建和单选框点击事件的添加
+Lock.prototype.init = function() { }    
 
 // 添加canvas的触屏事件，包括touchstart、touchmove、touchend，在事件中包含对密码点路径的绘制和对暂存密码的设置
 Lock.prototype.registerTouch = function() {}   
@@ -66,6 +68,7 @@ Lock.prototype.reset = function() {}
 // 初始化canvas，绘制九宫格
 Lock.prototype.initCanvas = function() {}     
 ```
+完成后，可以进一步完善一下，因为手势密码组件是唯一的，所以可以考虑用单例模式确保创建唯一密码组件对象。
 
 
 
